@@ -3,9 +3,8 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>title goes here</title>
+  <title>Krystals Collector</title>
   <script src="https://code.jquery.com/jquery.js"></script>
-  <script src="assets/javascript/game.js"></script>
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/reset.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
@@ -100,74 +99,12 @@
    </div>
     
 
-   <!-- total score box -->
-  
-   <div class="row">
-      
-   </div>
+   
    
   
   
-   <!-- JAVASCRIPT. PUT IN EXTERNAL FILE LATER!!! -->
-  <script type="text/javascript">
-
-   var targetNumber = Math.floor(Math.random() * 60) + 40;
-
-  $("#number-to-guess").text(targetNumber);
    
-    // Here we created a counter, we'll be using this to track the user's total.
-    var counter = 0;
-    var wins = 1;
-    var lost = 1;
-    
-
-      // Here we created code that selects a number either 10 or 11.
-      // We'll set this number at the start of the "game".
-      var numberOptions = Math.floor(Math.random() * 10) + 1;
-      var increment = numberOptions
-      
-      function randomNum() {
-        Math.floor(Math.random() * 11);
-      }
-
-
-      $(".images").on("click", function() {
-        document.getElementById("disappearing_text").style.visibility = "collapse";
-
-        
-        
-      
-
-        // Each time the user clicks the crystal the counter goes up by --
-        counter += increment;
-
-        // We then output the number of times the crystal is clicked.
-        document.getElementById('score').innerHTML = counter;
-
-        if (counter === targetNumber) { 
-          document.getElementById('wins').innerHTML = wins++;
-          counter = 0;
-          
-          
-        }
-
-        // Here we added an "else if" condition. If the user's counter ever exceeds the targetNumber...
-        else if (counter >= targetNumber) { 
-          document.getElementById('lost').innerHTML = lost++;
-          counter = 0;
-          
-          
-
-      }
-
-        
-
-      });
-
-
-
-   
-  </script>
+  
     
 
 
@@ -175,7 +112,7 @@
 
 
 
-
+  <script src="assets/javascript/game.js"></script>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>  

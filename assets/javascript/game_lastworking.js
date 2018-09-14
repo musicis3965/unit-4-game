@@ -12,7 +12,7 @@ $("#number-to-guess").text(targetNumber);
  var lost = 1;
  
 
-   // Here we created code that selects a number between 1 - 11
+   // Here we created code that selects a number between 1 - 10
    
    var numberOptions = Math.floor(Math.random() * 10) + 1;
    var increment = numberOptions;
@@ -25,19 +25,23 @@ $("#number-to-guess").text(targetNumber);
 
    $(".images").on("click", function() {
      document.getElementById("disappearing_text").style.visibility = "collapse";
+     
+     
+     
+    // define everything from 'counter to the else if statement as a funtion
+    // to run when images is clicked
 
      // Each time the user clicks the crystal the counter goes up by --
      counter += increment;
 
-
      // We then output the number of times the crystal is clicked.
      document.getElementById('score').innerHTML = counter;
 
-     
-
      if (counter === targetNumber) { 
        document.getElementById('wins').innerHTML = wins++;
-       counter = 0; 
+       counter = 0;
+       
+       
      }
 
      // Here we added an "else if" condition. If the user's counter ever exceeds the targetNumber...
@@ -48,11 +52,6 @@ $("#number-to-guess").text(targetNumber);
 // ending for line 26
      });
 
-//This code ended up not working
-$("#image1").on("click", randomNum());
-$("#image2").on("click", randomNum());
-$("#image3").on("click", randomNum());
-$("#image4").on("click", randomNum());
 
 
 
